@@ -1,0 +1,18 @@
+#login {
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+#login:hover {
+    background-color: #00b383;
+}
+
+#navi-link span {
+   /* color: #656777;  */
+   color: red; 
+}
