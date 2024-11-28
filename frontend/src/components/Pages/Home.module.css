@@ -1,0 +1,83 @@
+.pet_home_header {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  
+  .pet_home_header h1 {
+    margin-bottom: 0.3em;
+    font-size: 2.5em;
+  }
+  
+  .pet_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Usando grid para responsividade */
+    gap: 1.5em;
+  }
+  
+  .pet_card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .pet_card:hover {
+    transform: translateY(-5px); /* Efeito de hover */
+  }
+  
+  .pet_card_image {
+    background-size: cover;
+    background-position: center;
+    height: 225px;
+    width: 100%;
+    margin-bottom: 1.2em;
+    border-radius: 8px;
+  }
+  
+  .pet_card h3 {
+    color: #16479d;
+    margin-bottom: 1em;
+    font-size: 1.6em;
+    padding: 8px;
+    font-weight: bold;
+  }
+  
+  .pet_card p {
+    margin-bottom: 1em;
+  }
+  
+  .details_link {
+    display: inline-block;
+    border-radius: 8px;
+    color: #16479d;
+    background-color: #ffd400;
+    border: none;
+    min-width: 100px;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details_link:hover {
+    background-color: #e7c30d;
+    color: #fff;
+  }
+  
+  .adopted_text {
+    font-weight: bold;
+    color: #25b456;
+    padding: 15px;
+    background-color: #f4fdf5;
+    border-radius: 8px;
+    text-align: center;
+  }
+  

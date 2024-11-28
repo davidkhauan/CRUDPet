@@ -11,6 +11,10 @@ class UserController {
     static async register (requisition, response) {
         const { name, email, phone, password, confirmPassword } = requisition.body
 
+        if (!requisition.body) {
+            return response.status (422).json ({ message: 'Dados inválidos!' })
+        }
+
         if (!name) {
             return response.status (422).json ({ message: 'O nome é obrigatório!' })
         }
@@ -24,7 +28,8 @@ class UserController {
             return response.status (422).json ({ message: 'A Senha é obrigatória!' })
         }
         if (!confirmPassword) {
-            return response.status (422).json ({ message: 'Confirme a senha!' })
+            // return response.status (422).json ({ message: 'Confirme a senha!' })
+            return response.status (422).json (requisition.body.confirmPassword)
         }
 
         if (password !== confirmPassword) {
@@ -48,7 +53,8 @@ class UserController {
             name,
             email,
             phone,
-            password: passwordHash
+            password: passwordHash,
+            confirmPassword
         })
 
         try {
